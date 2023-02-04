@@ -8,8 +8,8 @@ export default function PayMent() {
   const money = user.user.price
   console.log(money)
   return (
-    <div className='ticket'>
-<img src={qr} alt="QR" ></img>
+    <div className='payment'><div>
+<img src={qr} alt="QR" ></img></div>
 
       {/* <QRCode
         value={`upi://pay?pa=intellemo@icici&pn=Intellemo&tn=cftrhwetaw4gta&am=${money}`} //generate your own Qr code.
@@ -17,7 +17,7 @@ export default function PayMent() {
 
       /> */}
       <p>Scan the code using PhonePe, Google Pay or Paytm</p>
-     < Link to="/recieptprint" className="main-link">Make Payment</Link>
+      <p>< Link to="/recieptprint" className="main-link">Make Payment</Link> </p>
     </div>
   );
 }

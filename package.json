@@ -1,7 +1,7 @@
 {
-  "name": "the-future-mobility",
+  "name": "kiosk-smartsolutions",
   "version": "0.1.0",
-  "homepage": ".",
+  "homepage": "https://rebel216.github.io/Kiosk-smartSolutions/",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.12.4",

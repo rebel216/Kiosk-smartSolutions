@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 import BarcodeReader from 'react-barcode-reader'
 import { Link } from "react-router-dom";
 
-console.log(JSON.parse(sessionStorage.barcode2))
-var barcode2 =JSON.parse(sessionStorage.barcode2);
+//console.log(JSON.parse(sessionStorage.barcode2))
+var barcode2 =null
 var barcode = null
 class ScanBarcode extends Component {
-
+barcode2 = JSON.parse(sessionStorage.barcode2);
   constructor(props){
     super(props)
     this.state = {

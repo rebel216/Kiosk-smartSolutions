@@ -35,7 +35,7 @@ export default function SpeedPost (){
 
   //return () => client.OPEN && client.close();
 
-  const phone = "234234234"//JSON.parse(sessionStorage.phone);
+  const phone = JSON.parse(sessionStorage.phone);
 
   const barcode2 = "RP123423234IN"   // Read from APi and store here
   sessionStorage.barcode2 = JSON.stringify(barcode2);
@@ -222,7 +222,7 @@ export default function SpeedPost (){
           <div className="input-field">
             <label>Price(Automatic)</label>
             <input autoComplete="off"type="text" className="form-control" id="formGroupExampleInput2"
-              name='price'
+              name='price' value={100}
 
               onChange={handleChange} />
           </div>
