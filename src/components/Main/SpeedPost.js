@@ -62,7 +62,7 @@ export default function SpeedPost (){
         state2:'',
         phone2:'',
         weight: '',
-        price: '',
+        price: '100',
         accesstoken: '',
         reference: '',
         postType: '',

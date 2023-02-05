@@ -24,6 +24,7 @@ export default function PrintComponent() {
 
         <h3 className="centered"> {user.user.fname}<span>  </span>{user.user.lname}</h3>
         <h3 className="centered">Date:<span>  </span> {time} </h3>
+        <h3 className="centered">Reciever</h3>
         <h3 className="centered">Address:<span>  </span>{user.user.address2}</h3>
         <h3 className="centered">  State:<span>  </span>{user.user.state2}</h3>
         <h3 className="centered">  City:<span>  </span>{user.user.city2}</h3>
