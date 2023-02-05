@@ -30,6 +30,12 @@ export default function PrintComponent() {
         <h3 className="centered">  City:<span>  </span>{user.user.city2}</h3>
         <h3 className="centered"> Mobile:<span>  </span>{user.user.phone2}</h3>
         <h3 className="centered">  PinCode:<span>  </span>{user.user.pincode2}</h3>
+        <h3 className="centered">Sender</h3>
+        <h3 className="centered">Address:<span>  </span>{user.user.address1}</h3>
+        <h3 className="centered">  State:<span>  </span>{user.user.state1}</h3>
+        <h3 className="centered">  City:<span>  </span>{user.user.city1}</h3>
+        <h3 className="centered"> Mobile:<span>  </span>{user.user.phone1}</h3>
+        <h3 className="centered">  PinCode:<span>  </span>{user.user.pincode1}</h3>
 
 
 
