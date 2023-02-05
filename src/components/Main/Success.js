@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom'
 import { w3cwebsocket as W3CWebSocket } from 'websocket';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+const { WDS_SOCKET_PORT1 } = process.env;
 
 export default function Success() {
-    const client = new W3CWebSocket("ws://127.0.0.1:8000");
+    const client = new W3CWebSocket("localhost:8000");
   const navigate = useNavigate();
     client.onopen = () => {
       console.log("Connected");

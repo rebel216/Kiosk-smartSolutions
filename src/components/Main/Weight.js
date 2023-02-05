@@ -6,26 +6,26 @@ import { useEffect , useState } from 'react';
 
 
 const Weight = () =>  {
-  const [weight, setWeight] = useState("");
+  // const [weight, setWeight] = useState("");
 
-    const client = new W3CWebSocket("ws://127.0.0.1:7000");
+  //   const client = new W3CWebSocket("ws://127.0.0.1:7000");
 
-    client.onopen = () => {
-      console.log("Connected");
-    };
+  //   client.onopen = () => {
+  //     console.log("Connected");
+  //   };
 
-    client.onmessage = (e) => {
-      const newObj = e.data;
-      setWeight(newObj);
-      console.log(newObj);
-    };
+  //   client.onmessage = (e) => {
+  //     const newObj = e.data;
+  //     setWeight(newObj);
+  //     console.log(newObj);
+  //   };
 
-    client.onclose = () => {
-      console.log("Closed...");
-    };
+  //   client.onclose = () => {
+  //     console.log("Closed...");
+  //   };
 
-    //return () => client.OPEN && client.close();
-    sessionStorage.weight1 = JSON.stringify(weight);
+  //   //return () => client.OPEN && client.close();
+  //   sessionStorage.weight1 = JSON.stringify(weight);
 
     return (
       <>

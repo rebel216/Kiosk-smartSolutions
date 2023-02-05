@@ -5,7 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import '../assets/styles/App.css';
 import Pincode from "react-pincode";
 import { w3cwebsocket as W3CWebSocket } from 'websocket';
-const client = new W3CWebSocket("ws://127.0.0.1:7000");
+const {WDS_SOCKET_PORT2} = process.env
+const client = new W3CWebSocket("ws://localhost:9000");
 
 export default function SpeedPost (){
   const [weight, setWeight] = useState("");
