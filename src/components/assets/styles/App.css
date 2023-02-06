@@ -244,19 +244,20 @@ th.price {
 }
 
 .ticket {
+  margin-top: -410px;
   width: 155px;
   max-width: 155px;
   text-align: center;
   max-width: 580px;
   width: 100%;
-  height: 100vh;
+  height: 60vh;
   display: block;
   justify-content: center;
   align-items: center;
   flex-flow: column;
   padding: 1rem;
   margin: 0 auto;
-  margin-top: 122px;
+
 }
 
 img {

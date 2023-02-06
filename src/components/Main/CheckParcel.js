@@ -4,7 +4,7 @@ import { w3cwebsocket as W3CWebSocket } from 'websocket';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 const {WDS_SOCKET_PORT2} = process.env
-const client = new W3CWebSocket("ws://localhost:8000");
+const client = new W3CWebSocket("ws://localhost:9000");
 export default function CheckParcel () {
 
 

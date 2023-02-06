@@ -10,17 +10,18 @@ const Main = () => {
   return (
       <>
 
-      <div className="container">
+      <div className="ticket">
 
-
+<p>
                   <NavLink to="/RegisteredPost" className='main-link'>
                   RegisteredPost
-          </NavLink>
+          </NavLink> </p>
 
 
-                  <NavLink to="/SpeedPost" className='main-link'>
+          <p>            <NavLink to="/SpeedPost" className='main-link'>
                   SpeedPost
           </NavLink>
+          </p>
 
 
       </div>
