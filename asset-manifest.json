@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Kiosk-smartSolutions/static/css/main.2f13bb04.css",
-    "main.js": "/Kiosk-smartSolutions/static/js/main.15b9cf76.js",
+    "main.css": "/Kiosk-smartSolutions/static/css/main.f4726807.css",
+    "main.js": "/Kiosk-smartSolutions/static/js/main.e0f059c6.js",
     "static/media/qr.PNG": "/Kiosk-smartSolutions/static/media/qr.82aca75b2668d8d84e18.PNG",
     "index.html": "/Kiosk-smartSolutions/index.html",
-    "main.2f13bb04.css.map": "/Kiosk-smartSolutions/static/css/main.2f13bb04.css.map",
-    "main.15b9cf76.js.map": "/Kiosk-smartSolutions/static/js/main.15b9cf76.js.map"
+    "main.f4726807.css.map": "/Kiosk-smartSolutions/static/css/main.f4726807.css.map",
+    "main.e0f059c6.js.map": "/Kiosk-smartSolutions/static/js/main.e0f059c6.js.map"
   },
   "entrypoints": [
-    "static/css/main.2f13bb04.css",
-    "static/js/main.15b9cf76.js"
+    "static/css/main.f4726807.css",
+    "static/js/main.e0f059c6.js"
   ]
 }
