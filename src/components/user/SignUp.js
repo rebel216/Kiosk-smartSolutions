@@ -55,7 +55,7 @@ const Signup = () => {
     const userdata = {
       user,
     };
-    
+    console.log(user)
     const response = await fetch(`${BASE_URL}api/v1/users/signup`, {
       method: 'POST',
       headers: {
@@ -69,7 +69,7 @@ const Signup = () => {
       dispatch(login(user));
     } else {
     }    
-		navigate('/')
+		
   };
 
   return (
@@ -130,8 +130,11 @@ const Signup = () => {
           <p>
             Already have an account?
             {' '}
-            <Link to="/">Login</Link>
+            <Link to="/devise">Login</Link>
           </p>
+          <p className="Auth-content">
+						<b>	Note:</b> This is a test version and the database may be in sleep mode. <b> Please wait a few minutes</b> for it to respond on first use.	
+					</p>
         </div>
       </form>
     </div>

@@ -8,7 +8,7 @@ const client = new W3CWebSocket("ws://localhost:9000");
 export default function CheckParcel () {
 
 
-  const weight1 = JSON.parse(sessionStorage.weight1);
+  const weight1 = "122.asd"//JSON.parse(sessionStorage.weight1);
 
   const [weight, setWeight] = useState("");
 
@@ -37,22 +37,49 @@ export default function CheckParcel () {
       console.log("Closed...");
     };
   const w1 = parseFloat(weight1.substring(0,6))
-  const w = parseFloat(weight.substring(0,6))
+  const w = parseFloat(weight.substring(0, 6))
+  
+  const checkWeight = () => {
+    console.log("clicked")
+    client.onmessage = (e) => {
+      const newObj = e.data;
+      setWeight(newObj);
 
 
-    return (
-        <div className='ticket'>
+    };
+
+    setTimeout(() => {
+      client.close();
+
+    }, "5000")
+
+    client.onopen = () => {
+      console.log("Connected");
+    };
+
+
+
+    client.onclose = () => {
+      console.log("Closed...");
+    };
+ }
+
+  return (
+    <div className='heading'>
         <h1>Place the parcel inside the Machine Again</h1>
+        <div className='login-box'>
+      
 
 
-        <p>
-        {w == w1 || w == w1+ .005  || w == w1- .005  ? (
-        <Link  to="/payment" className="main-link">Make Payment</Link>
+        
+        {true  ? (
+        <Link  to="/payment" className="link1"><button className="link2">PayMent</button></Link>
       ) : (
-        <h1 className="error">Parcel Weight missmatch</h1>
+              <><h1>Weight missmatch. Please Place the same parcel</h1>
+                <button onClick={checkWeight} className="error">Click to Check Again</button></>
       )}
-        </p>
-
+       
+</div>
 
       </div>
     )

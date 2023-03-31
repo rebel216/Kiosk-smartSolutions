@@ -32,10 +32,13 @@ export const AddVehicleSlice = (request) => {
       type: 'SET_LOADING',
     });
     await new Promise((resolve) => setTimeout(resolve, 1000));    
-    const response = await axios.post(`${BASE_URL}api/v1/vehicles`, request,{ headers });
-  
+    const response = await axios.post(`${BASE_URL}api/v1/parcels`, request,{ headers });
+   const response1 = await axios.post(`${BASE_URL}api/v1/parcelcopies`, request,{ headers });
     const data = await response;
+    const data1 = await response1;
+    console.log(data)
     dispatch({ type: ADD_VEHICAL, payload: data });
+    dispatch({ type: ADD_VEHICAL, payload: data1 });
     dispatch({
       type: 'SET_LOADING',
     });
@@ -57,7 +60,7 @@ export const removeVehical = (id) => {
       },
     });
     if (response.ok) {
-      dispat
+      
       dispatch({ type: REMOVE_VEHICAL, payload: id });
     } else {
     }
@@ -75,7 +78,7 @@ export const getVehicals = () => {
     // wait for 1000ms to simulate a loading time
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
-    const response = await fetch( `${BASE_URL}api/v1/vehicles/` , {
+    const response = await fetch( `${BASE_URL}api/v1/parcels/` , {
       headers: {
         Authorization: JSON.parse(localStorage.getItem('user')).token,
       },

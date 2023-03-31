@@ -10,18 +10,19 @@ const Main = () => {
   return (
       <>
 
-      <div className="ticket">
-
-<p>
-                  <NavLink to="/RegisteredPost" className='main-link'>
-                  RegisteredPost
-          </NavLink> </p>
+      <div className="login-box">
 
 
-          <p>            <NavLink to="/SpeedPost" className='main-link'>
-                  SpeedPost
+                  <NavLink to="/RegisteredPost" className='link1'>
+                  <div className="form-group mt-3 d-flex flex-column  align-items-center justify-content-center">
+                <button  className="link">Registered Post</button></div>
+          </NavLink> 
+<br></br><br></br>
+        <NavLink to="/SpeedPost" className='link1'>
+          <div className="form-group mt-3 d-flex flex-column  align-items-center justify-content-center">
+                <button  className="link">SpeedPost</button></div>
           </NavLink>
-          </p>
+         
 
 
       </div>

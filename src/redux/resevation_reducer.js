@@ -66,7 +66,7 @@ export const cancelTestDrive = (id) => async (dispatch) => {
 
 export const getreservations = () => {
   return async (dispatch) => {
-    const response = await fetch(`${BASE_URL}api/v1/users/${JSON.parse(localStorage.getItem("user")).id}/reservations`, {
+    const response = await fetch(`${BASE_URL}api/v1/parcels`, {
       headers: {
         Authorization: JSON.parse(localStorage.getItem("user")).token,
       },

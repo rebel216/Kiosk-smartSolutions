@@ -54,25 +54,25 @@ const SignIn = () => {
 
 
 	return (
-		<div className="wrapper">
-      <h1 className="main-heading centre">Sign in</h1>
-      <p className="sub-text">Sign in using your mobile number.</p>
-            <center>
-                <div className="input-field" style={{ display: !show ? "block" : "none" }}>
-                    <input  value={mynumber} onChange={(e) => {
-                       setnumber(e.target.value) }}
-                        placeholder="phone number" />
-                    <br /><br />
-                    <div id="recaptcha-container"></div>
-                    <button className='main-button' onClick={signin}>Send OTP</button>
-                </div>
-                <div className="input-field" style={{ display: show ? "block" : "none" }}>
-                    <input type="text"  placeholder={"Enter your OTP"}
-                        onChange={(e) => { setotp(e.target.value) }}></input>
-                    <br /><br />
-                    <button className='main-button' onClick={ValidateOtp}>Verify</button>
-                </div>
-            </center>
+		<div className="login-box">
+            <h1>Log in</h1>
+            
+                    <center>
+                        <div className="input-box" style={{ display: !show ? "block" : "none" }}>
+                            <input  value={mynumber} onChange={(e) => {
+                            setnumber(e.target.value) }}
+                                placeholder="phone number" />
+                            <br /><br />
+                            <div id="recaptcha-container"></div>
+                            <button className="link" onClick={signin}>SendOTP</button>
+                        </div>
+                        <div  style={{ display: show ? "block" : "none" }}>
+                            <input type="text"  placeholder={"Enter your OTP"}
+                                onChange={(e) => { setotp(e.target.value) }}></input>
+                            <br /><br />
+                            <button className='link' onClick={ValidateOtp}>Verify</button>
+                        </div>
+                    </center>
         </div>
 
 	);

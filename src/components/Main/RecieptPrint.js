@@ -20,7 +20,7 @@ const RecieptPrint = () => {
     return (
         <>
 
-      <div className="ticket">
+      <div className="login-box">
 
       <img src={logo} alt="Logo" className="logo"/>
 

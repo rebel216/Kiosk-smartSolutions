@@ -13,6 +13,10 @@ import SignUp from './components/user/SignUp'
 import PostSignin from './components/user/postSignin'
 import CheckParcel from './components/Main/CheckParcel';
 import Success from './components/Main/Success';
+import { ExportToExcel } from './components/Main/ExportToExcel';
+import DownloadData from './components/Main/DownloadData';
+import DeviceSignin from './components/user/DeviceSignin';
+import SelectPage from './components/Main/SelectPage';
 
 const App = () => {
   const user = useSelector((state) => state.user);
@@ -25,10 +29,13 @@ const App = () => {
         <Route path='/recieptprint' element={<RecieptPrint />} />
         {/* <Route path='/serial' element={<Serial />} /> */}
         <Route path='/speedpost' element={<SpeedPost />} />
-            <Route path='/' element={<SignIn />} />
-            <Route path='/main' element={<Main />} />
+        {<Route path='/' element={<SignIn />} />}
+         { <Route path='/devise' element={<DeviceSignin />} /> }
+        <Route path='/main' element={<Main />} />
+        <Route path='/select' element={<SelectPage />} />
             <Route path='/PrintComponent' element={<PrintComponent />} />
-            <Route path='/ScanBarcode' element={<ScanBarcode />} />
+        <Route path='/ScanBarcode' element={<ScanBarcode />} />
+         <Route path='/ExportToExcel' element={<DownloadData />} />
         <Route path='/PayMent' element={<PayMent />} />
         <Route path='/success' element={<Success />} />
         <Route path='/signup' element={<SignUp />} />

@@ -1,7 +1,7 @@
 // import { setLoading } from '../loading/load_reducer';
 import BASE_URL from "../api";
 import { Link } from "react-router-dom";
-
+import {useNavigate } from "react-router-dom";
 
 const LOG_IN = 'LOG_IN';
 const LOG_OUT = 'LOG_OUT';
@@ -10,7 +10,7 @@ const SING_UP = 'SING_UP'
 const initialState = JSON.parse(localStorage.getItem('user')) || null;
 
 const userReducer = (state = initialState, action) => {
-
+  
   switch (action.type) {
     case LOG_IN:
       return action.payload;
@@ -23,6 +23,7 @@ const userReducer = (state = initialState, action) => {
   }
 };
 export const login = (user) => async (dispatch) => {
+
   const userdata = {
     user: {
       email: user.email,
@@ -59,6 +60,8 @@ export const login = (user) => async (dispatch) => {
       payload: data,
     });
     alert("Login success , u can use the machine")
+    
+    window.location = '/Kiosk-smartSolutions/#/select';
 
   } else {
     alert("wrong username and/or password")
