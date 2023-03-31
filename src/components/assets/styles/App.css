@@ -25,12 +25,38 @@ body {
   font-size: 20px;
 }
 
+.weight-field {
+  position: absolute;
+  top: 10%;
+  left: 90%;
+  width: auto;
+  padding: 10px;
+  transform: translate(-50%, -50%);
+  background: rgba(74, 235, 241, 0.376);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(11, 11, 11, 0.801);
+  border-radius: 10px;
+}
+
+.price-field {
+  position: absolute;
+  top: 20%;
+  left: 90%;
+  width: auto;
+  padding: 10px;
+  transform: translate(-50%, -50%);
+  background: rgba(74, 235, 241, 0.376);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(11, 11, 11, 0.801);
+  border-radius: 10px;
+}
+
 .login-box {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 700px;
-  padding: 40px;
+  width: auto;
+  padding: 10px;
   transform: translate(-50%, -50%);
   background: rgba(74, 235, 241, 0.376);
   box-sizing: border-box;
@@ -180,8 +206,7 @@ text-decoration: none;
   width: fit-content;
   word-break: break-word;
   border: 0;
-  margin-top: 22px;
-  margin-left: 190px;
+  margin-top: 2px;
 
 }
 

@@ -158,12 +158,7 @@ export default function SpeedPost() {
           <h1 className="heading">SpeedPost</h1>
         </div>
       </div>
-
-      <div className="login-box">
-        <div className="input-box">
-          <form onSubmit={(e) => handleSubmit(e)} >
-            {isOpen2&&(<div id="Sender-field">
-            <div className="input-field">
+<div className="weight-field">
               <label>Weight(Automatic)</label>
               <input
                 autoComplete="off"
@@ -172,7 +167,25 @@ export default function SpeedPost() {
                 name="weight"
                 onChange={handleChange}
               />
-            </div>
+      </div>
+      <div className="price-field">
+                  <label>Price(Automatic)</label>
+                  <input
+                    autoComplete="off"
+                    type="text"
+                    className="form-control"
+                    id="formGroupExampleInput2"
+                    name="price"
+                    value={100}
+                    onChange={handleChange}
+        />
+        </div>
+      <div className="login-box">
+        <div className="input-box">
+          <form onSubmit={(e) => handleSubmit(e)} >
+            {isOpen2&&(<div id="Sender-field">
+            
+              
             <div className="input-field">
               <label>Sender's Name</label>
               <input
@@ -196,7 +209,8 @@ export default function SpeedPost() {
                 placeholder="last name"
                 onChange={handleChange}
               />
-            </div>
+              </div>
+              
             <div className="input-field">
               <label>Sender Address</label>
               <input
@@ -210,8 +224,8 @@ export default function SpeedPost() {
               />
             </div>
             <div className="input-field">
-              <label>Sender's Mobile</label>
-              <input
+              
+              <input hidden
                 autoComplete="off"
                 className="form-control"
                 value={phone}
@@ -234,14 +248,8 @@ export default function SpeedPost() {
                 </button></div>
             </div>)}
             {isOpen && (
-              <div id="Reciver-field"><label>Weight(Automatic)</label>
-                <input
-                  autoComplete="off"
-                  className="form-control"
-                  value={weight}
-                  name="weight"
-                  onChange={handleChange}
-                />
+              <div id="Reciver-field">
+                
                 <div className="input-field">
                   <label>Reciever's Name</label>
                   <input
@@ -300,22 +308,12 @@ export default function SpeedPost() {
                     onChange={handleChange}
                   />
                 </div>
-                <div className="input-field">
-                  <label>Price(Automatic)</label>
-                  <input
-                    autoComplete="off"
-                    type="text"
-                    className="form-control"
-                    id="formGroupExampleInput2"
-                    name="price"
-                    value={100}
-                    onChange={handleChange}
-                  />
+                
                   <div className="form-group mt-3 d-flex flex-column  align-items-center justify-content-center">
                   <button className="link" type="submit">
                     Register
                   </button></div>
-                </div>
+                
               </div>)}
           </form>
         </div>

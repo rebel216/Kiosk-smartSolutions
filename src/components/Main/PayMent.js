@@ -84,9 +84,9 @@ function loadScript(src) {
 		  <div className="login-box">
             <header className="App-header">
                 
-                <h1>Pay to Register</h1>
+                
                 <button className="link2" onClick={displayRazorpay}>
-                    Pay ₹500
+                    Pay ₹100
                 </button>
             </header>
         </div>

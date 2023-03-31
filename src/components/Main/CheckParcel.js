@@ -73,7 +73,7 @@ export default function CheckParcel () {
 
         
         {true  ? (
-        <Link  to="/payment" className="link1"><button className="link2">PayMent</button></Link>
+        <Link  to="/payment" className="link1"><button className="link2">Make PayMent</button></Link>
       ) : (
               <><h1>Weight missmatch. Please Place the same parcel</h1>
                 <button onClick={checkWeight} className="error">Click to Check Again</button></>
