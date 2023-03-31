@@ -29,8 +29,8 @@ const App = () => {
         <Route path='/recieptprint' element={<RecieptPrint />} />
         {/* <Route path='/serial' element={<Serial />} /> */}
         <Route path='/speedpost' element={<SpeedPost />} />
-        {<Route path='/' element={<SignIn />} />}
-         { <Route path='/devise' element={<DeviceSignin />} /> }
+        {<Route path='/devise' element={<SignIn />} />}
+         { <Route path='/' element={<DeviceSignin />} /> }
         <Route path='/main' element={<Main />} />
         <Route path='/select' element={<SelectPage />} />
             <Route path='/PrintComponent' element={<PrintComponent />} />

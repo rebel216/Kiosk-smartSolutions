@@ -13,12 +13,14 @@ const SelectPage = () => {
       <div className="login-box">
 
 
-                  <NavLink to="/ExportToExcel" className='link'>
-                  <h1>Download excel</h1>
-          </NavLink> 
+                  <NavLink to="/ExportToExcel" className='link1'>
+                  <button className='link'>Send Data to registered Email</button>
+        </NavLink> 
+        
+        <br></br><br></br>
 
-                <NavLink to="/" className='link'>
-                <h1>Use Machine</h1>
+                <NavLink to="/" className='link1'>
+                <button className='link'>Use Machine</button>
           </NavLink>
          
 

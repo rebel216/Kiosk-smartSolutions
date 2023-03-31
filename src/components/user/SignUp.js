@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import '../assets/styles/user.scss';
 import { login } from '../../redux/user_reducer';
-import Vespalogo from '../layouts/logo';
 const Signup = () => {
   const [formData, setFormData] = React.useState({
     name: '',
@@ -76,7 +75,7 @@ const Signup = () => {
     <div className="Auth-container">
       <form onSubmit={handleSubmit} className="Auth-form">
         <div className="Auth-content">
-        <Vespalogo/>
+        
           <h3 className="Auth-title">Sign Up</h3>
           <div className="form-group mt-3 text-start">
             <label htmlFor="email">Name</label>
@@ -130,7 +129,7 @@ const Signup = () => {
           <p>
             Already have an account?
             {' '}
-            <Link to="/devise">Login</Link>
+            <Link to="/">Login</Link>
           </p>
           <p className="Auth-content">
 						<b>	Note:</b> This is a test version and the database may be in sleep mode. <b> Please wait a few minutes</b> for it to respond on first use.	
