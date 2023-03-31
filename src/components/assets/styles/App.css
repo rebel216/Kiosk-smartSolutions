@@ -27,8 +27,8 @@ body {
 
 .weight-field {
   position: absolute;
-  top: 10%;
-  left: 90%;
+ top: 120px;
+  left: 980px;
   width: auto;
   padding: 10px;
   transform: translate(-50%, -50%);
@@ -40,8 +40,8 @@ body {
 
 .price-field {
   position: absolute;
-  top: 20%;
-  left: 90%;
+  top: 250px;
+  left: 980px;
   width: auto;
   padding: 10px;
   transform: translate(-50%, -50%);
@@ -136,9 +136,9 @@ text-decoration: none;
 text-decoration: none;
   background: #f35954;
   border-radius: 999px;
-  box-shadow: #536957 0 10px 20px -10px;
+  box-shadow: #610404 0 10px 20px -10px;
   box-sizing: border-box;
-  color: #141715;
+  color: #0b0c0b;
   cursor: pointer;
   font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
   font-size: 26px;
@@ -160,9 +160,9 @@ text-decoration: none;
 text-decoration: none;
   background: #f35954;
   border-radius: 999px;
-  box-shadow: #536957 0 10px 20px -10px;
+  box-shadow: #610404 0 10px 20px -10px;
   box-sizing: border-box;
-  color: #141715;
+  color: #0b0c0b;
   cursor: pointer;
   font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
   font-size: 26px;
@@ -187,9 +187,9 @@ text-decoration: none;
 text-decoration: none;
   background: #f35954;
   border-radius: 999px;
-  box-shadow: #536957 0 10px 20px -10px;
+  box-shadow: #610404 0 10px 20px -10px;
   box-sizing: border-box;
-  color: #141715;
+  color: #0b0c0b;
   cursor: pointer;
   font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
   font-size: 26px;
@@ -228,7 +228,7 @@ text-decoration: none;
 }
 
 .login-box button:hover {
-  background: #188303f1;
+  background: #f41606f1;
  
  
 }

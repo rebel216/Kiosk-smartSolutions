@@ -9,15 +9,15 @@ const { WDS_SOCKET_PORT2 } = process.env;
 
 const client = new W3CWebSocket("ws://localhost:9000");
  const generateBarcode = (lenth) => {
-        const char = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890';
+        const char = '1234567890';
         const random = Array.from(
             {length: lenth},
             () => char[Math.floor(Math.random() * char.length)]
         );
         const randomString = random.join("");
-        return randomString;
+        return 'ED'+randomString+'IN';
  }
-     const barcode2 = generateBarcode(10);
+     const barcode2 = generateBarcode(9);
 export default function RegisteredPost() {
   const [weight, setWeight] = useState("");
 
@@ -95,15 +95,19 @@ export default function RegisteredPost() {
     // navigate('/');
   };
   const validateFields = (form) => {
-    if (user.fname !== "" && user.lname !== "") {
+    if (user.fname !== "" && user.lname !== "" && user.address1 !== "" ) {
       return true;
     }
     return false;
   };
 
   const handleDisplay = (e) => { 
+    if (validateFields(e.target)) {
     setisOpen(true);
     setisOpen2(false);
+    }
+
+    
   }
   const handleSubmit = (e) => {
     client.close();
@@ -154,12 +158,7 @@ export default function RegisteredPost() {
           <h1 className="heading">RegisteredPost</h1>
         </div>
       </div>
-
-      <div className="login-box">
-        <div className="input-box">
-          <form onSubmit={(e) => handleSubmit(e)} >
-            {isOpen2&&(<div id="Sender-field">
-            <div className="input-field">
+<div className="weight-field">
               <label>Weight(Automatic)</label>
               <input
                 autoComplete="off"
@@ -168,7 +167,25 @@ export default function RegisteredPost() {
                 name="weight"
                 onChange={handleChange}
               />
-            </div>
+      </div>
+      <div className="price-field">
+                  <label>Price(Automatic)</label>
+                  <input
+                    autoComplete="off"
+                    type="text"
+                    className="form-control"
+                    id="formGroupExampleInput2"
+                    name="price"
+                    value={100}
+                    onChange={handleChange}
+        />
+        </div>
+      <div className="login-box">
+        <div className="input-box">
+          <form onSubmit={(e) => handleSubmit(e)} >
+            {isOpen2&&(<div id="Sender-field">
+            
+              
             <div className="input-field">
               <label>Sender's Name</label>
               <input
@@ -192,10 +209,11 @@ export default function RegisteredPost() {
                 placeholder="last name"
                 onChange={handleChange}
               />
-            </div>
+              </div>
+              
             <div className="input-field">
               <label>Sender Address</label>
-              <textarea
+              <input
                 autoComplete="off"
                 type="text"
                 className="form-control"
@@ -206,8 +224,8 @@ export default function RegisteredPost() {
               />
             </div>
             <div className="input-field">
-              <label>Sender's Mobile</label>
-              <input
+              
+              <input hidden
                 autoComplete="off"
                 className="form-control"
                 value={phone}
@@ -223,20 +241,15 @@ export default function RegisteredPost() {
                 getData={(data) => setPincodeData1(data)}
                 name="pincode1"
               />
-            </div>
-            <button className="main-link" onClick={handleDisplay}>
+              </div>
+              <div className="form-group mt-3 d-flex flex-column  align-items-center justify-content-center">
+            <button className="link" onClick={handleDisplay}>
                 Next
-                </button>
+                </button></div>
             </div>)}
             {isOpen && (
-              <div id="Reciver-field"><label>Weight(Automatic)</label>
-                <input
-                  autoComplete="off"
-                  className="form-control"
-                  value={weight}
-                  name="weight"
-                  onChange={handleChange}
-                />
+              <div id="Reciver-field">
+                
                 <div className="input-field">
                   <label>Reciever's Name</label>
                   <input
@@ -295,21 +308,12 @@ export default function RegisteredPost() {
                     onChange={handleChange}
                   />
                 </div>
-                <div className="input-field">
-                  <label>Price(Automatic)</label>
-                  <input
-                    autoComplete="off"
-                    type="text"
-                    className="form-control"
-                    id="formGroupExampleInput2"
-                    name="price"
-                    value={100}
-                    onChange={handleChange}
-                  />
-                  <button className="main-link" type="submit">
+                
+                  <div className="form-group mt-3 d-flex flex-column  align-items-center justify-content-center">
+                  <button className="link" type="submit">
                     Register
-                  </button>
-                </div>
+                  </button></div>
+                
               </div>)}
           </form>
         </div>
