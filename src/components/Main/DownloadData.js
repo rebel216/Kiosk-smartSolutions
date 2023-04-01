@@ -7,7 +7,7 @@ import * as XLSX from "xlsx";
 function DownloadData() {
   const fetchData = async () => {
     const response = axios.get(
-      `${BASE_URL}api/v1/parcelcopies/${
+      `${BASE_URL}api/v1/parcels/${
         JSON.parse(localStorage.getItem("user")).id
       }`,
       {

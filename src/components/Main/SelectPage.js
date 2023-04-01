@@ -19,7 +19,7 @@ const SelectPage = () => {
         
         <br></br><br></br>
 
-                <NavLink to="/" className='link1'>
+                <NavLink to="/devise" className='link1'>
                 <button className='link'>Use Machine</button>
           </NavLink>
          

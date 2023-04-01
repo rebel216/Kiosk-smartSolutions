@@ -54,7 +54,7 @@ const SignIn = () => {
 
 
 	return (
-		<div className="login-box">
+		<div className="Auth-container">
             <h1>Log in</h1>
             
                     <center>

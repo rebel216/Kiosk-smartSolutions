@@ -46,10 +46,10 @@ export default function PrintComponent() {
           <h6 className="centered"> Mobile:<span>  </span>{user.user.phone1}</h6>
           <h6 className="centered">  PinCode:<span>  </span>{user.user.pincode1}</h6>
       
+        </div> <div className="">
+        <button className='link1' onClick={handleClick}>PRINT</button>
         </div>
-        <div className="form-group mt-3 d-flex flex-column  align-items-center justify-content-center">
-        <button className='link3' onClick={handleClick}>PRINT</button>
-        </div></div>
+       </div>
     </>
   )
 }

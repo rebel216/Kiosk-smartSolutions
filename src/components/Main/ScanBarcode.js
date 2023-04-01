@@ -21,7 +21,7 @@ barcode2 = JSON.parse(sessionStorage.barcode2);
     })
     //sessionStorage.barcode1 ="RP123423234IN" //JSON.stringify(data);//change barcode here ... harcoding for test
 
-    console.log(sessionStorage.barcode)
+    //console.log(sessionStorage.barcode)
     barcode = data;
   }
   handleError(err) {
@@ -31,7 +31,7 @@ barcode2 = JSON.parse(sessionStorage.barcode2);
   render(){
 
     return (
-      <div><h1 className='heading'>Take out the Parcel out of machine , stick the lable on Parcel and scan the lable in Barcode Scanner.</h1>
+      <div><h2 className='heading'>Take out the Parcel out of machine , stick the lable on Parcel and scan the lable in Barcode Scanner.</h2>
       <div className='login-box'>
          
          <BarcodeReader
@@ -42,13 +42,13 @@ barcode2 = JSON.parse(sessionStorage.barcode2);
 
 
 
-        {true ? (
-          true ?(
+        {barcode ? (
+          barcode=barcode2 ?(
             <><p><h1>Sucess</h1></p><p><Link to="/checkparcelweight" className="link1"><button className="link2 ">Next Page</button></Link></p></>
           ) : (
-              <><p className="link">Use Barcode Printed on Lable</p><p><button className="link ">Scan Again</button></p></>)
+              <><h2 className="link1">Use Barcode Printed on Lable</h2><p><button className="error ">Scan Again</button></p></>)
       ) : (
-        <><button className="link">Scan Again</button></>
+        <><button className="error">Scan Again</button></>
       )}
 
 </div>

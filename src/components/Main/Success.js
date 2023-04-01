@@ -41,7 +41,7 @@ export default function Success() {
     <div className='login-box'>
     <div><h1>Post is Accepted and You can track it online.</h1></div>
 <p>
-        <Link to="/" className="link1" onClick={() => {
+        <Link to="/devise" className="link1" onClick={() => {
           client.send('!');
           dispatch(AddVehicleSlice(formData.user));
           //send data to ruby backend here
