@@ -24,6 +24,13 @@ body {
   background-color:rgb(251, 255, 0);
   font-size: 20px;
 }
+.login{
+ display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 1px;
+}
+
 
 .weight-field {
   position: absolute;
