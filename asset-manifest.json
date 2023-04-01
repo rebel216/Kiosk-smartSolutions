@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Kiosk-smartSolutions/static/css/main.a104c785.css",
-    "main.js": "/Kiosk-smartSolutions/static/js/main.f09c689b.js",
+    "main.js": "/Kiosk-smartSolutions/static/js/main.f5c27204.js",
     "index.html": "/Kiosk-smartSolutions/index.html",
     "main.a104c785.css.map": "/Kiosk-smartSolutions/static/css/main.a104c785.css.map",
-    "main.f09c689b.js.map": "/Kiosk-smartSolutions/static/js/main.f09c689b.js.map"
+    "main.f5c27204.js.map": "/Kiosk-smartSolutions/static/js/main.f5c27204.js.map"
   },
   "entrypoints": [
     "static/css/main.a104c785.css",
-    "static/js/main.f09c689b.js"
+    "static/js/main.f5c27204.js"
   ]
 }
