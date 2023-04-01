@@ -57,6 +57,7 @@ const Signup = () => {
     console.log(user)
     const response = await fetch(`${BASE_URL}api/v1/users/signup`, {
       method: 'POST',
+      
       headers: {
         'Content-Type': 'application/json',
       },
