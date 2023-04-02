@@ -46,7 +46,7 @@ barcode2 = JSON.parse(sessionStorage.barcode2);
 
         {true ? ( // change here
           true ?(// change here
-            <><p><h1>Sucess</h1></p><p><Link to="/checkparcelweight" className="link1"><button className="btn btn-primary w-75 mb-2" >Next Page</button></Link></p></>
+            <><p><h1 className='success'>Sucess</h1></p><p><Link to="/checkparcelweight" className="link1"><button className="btn btn-primary w-75 mb-2" >Next Page</button></Link></p></>
           ) : (
               <><h2 className="link1">Use Barcode Printed on Lable</h2><p><button className="error ">Scan Again</button></p></>)
       ) : (

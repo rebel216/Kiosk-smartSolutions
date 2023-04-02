@@ -59,8 +59,12 @@ top: 20%;
 }
 
 .login{
-margin-top: 270px;
+margin-top: auto;
 
+}
+
+.success{
+  color: rgb(223, 41, 13);
 }
 
 .login-box {

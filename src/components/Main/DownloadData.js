@@ -36,9 +36,11 @@ function DownloadData() {
         <h1>Send Data to registered email.</h1>
       </div>
       <div>
+        <div className="form-group mt-3 d-flex flex-column  align-items-center justify-content-center">
+               
         <button className="btn btn-primary w-75 mb-2" onClick={fetchData}>
           Send Email
-        </button>
+        </button></div>
         <br></br>
       </div>
     </div>
