@@ -15,12 +15,12 @@ const Main = () => {
 
                   <NavLink to="/RegisteredPost" className='link1'>
                   <div className="form-group mt-3 d-flex flex-column  align-items-center justify-content-center">
-                <button  className="link">Registered Post</button></div>
+                <button  className="btn btn-primary w-75 mb-2">Registered Post</button></div>
           </NavLink> 
 <br></br><br></br>
         <NavLink to="/SpeedPost" className='link1'>
           <div className="form-group mt-3 d-flex flex-column  align-items-center justify-content-center">
-                <button  className="link">SpeedPost</button></div>
+                <button  className="btn btn-primary w-75 mb-2">SpeedPost</button></div>
           </NavLink>
          
 

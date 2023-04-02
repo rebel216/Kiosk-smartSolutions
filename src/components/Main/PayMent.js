@@ -85,7 +85,7 @@ function loadScript(src) {
             <header className="App-header">
                 
                 <h2>Make payment </h2>
-                <button className="link2" onClick={displayRazorpay}>
+                <button className="btn btn-primary w-75 mb-2" onClick={displayRazorpay}>
                     Pay ₹100
                 </button>
             </header>

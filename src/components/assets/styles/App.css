@@ -74,16 +74,14 @@ top: 20%;
 .login-box h2 {
   margin: 0 0 30px;
   padding: 0;
-  color: #fff;
+  color: rgb(13, 12, 12);
   text-align: center;
 }
 
 .input-field input {
-  height: 50px;
+  height: 60px;
   font-weight:bold;
-  font-size:40px;
-  width: 60%;
-  padding: 0.75rem;
+  font-size:20px;
   border-radius: 13px;
   background: rgb(249, 248, 248);
   border: 2px solid #ccc;
@@ -110,7 +108,9 @@ input {
 .input-field label {
   color: rgb(0, 0, 0);
    font-weight:bold;
-  font-size:30px;
+  font-size:20px;
+  margin-top: -21px;
+  margin-bottom: -11px;
 }
 
 .login-box .user-box label {

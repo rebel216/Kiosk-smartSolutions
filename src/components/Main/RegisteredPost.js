@@ -15,7 +15,7 @@ const client = new W3CWebSocket("ws://localhost:9000");
             () => char[Math.floor(Math.random() * char.length)]
         );
         const randomString = random.join("");
-        return 'ED'+randomString+'IN';
+        return 'RP'+randomString+'IN';
  }
      const barcode2 = generateBarcode(9);
 export default function RegisteredPost() {
@@ -152,10 +152,11 @@ export default function RegisteredPost() {
   };
 
   return (
-    <>
+    <div className="Auth-container">
+      <div className="Auth-content">
       <div className="header" id="myHeader">
         <div className="header-items">
-          <h1 className="heading">RegisteredPost</h1>
+          <h1 className="heading">Registered Post</h1>
         </div>
       </div>
 <div className="weight-field">
@@ -180,13 +181,13 @@ export default function RegisteredPost() {
                     onChange={handleChange}
         />
         </div>
-      <div className="login-box">
+      <div className="Auth-for">
         <div className="input-box">
           <form onSubmit={(e) => handleSubmit(e)} >
             {isOpen2&&(<div id="Sender-field">
             
               
-            <div className="input-field">
+            <div className="form-group mt-3 text-start input-field">
               <label>Sender's Name</label>
               <input
                 autoComplete="off"
@@ -198,7 +199,7 @@ export default function RegisteredPost() {
                 placeholder="first name"
                 onChange={handleChange}
               />
-              <br />
+           
               <input
                 autoComplete="off"
                 type="text"
@@ -211,7 +212,7 @@ export default function RegisteredPost() {
               />
               </div>
               
-            <div className="input-field">
+           <div className="form-group mt-3 text-start input-field">
               <label>Sender Address</label>
               <input
                 autoComplete="off"
@@ -223,7 +224,7 @@ export default function RegisteredPost() {
                 onChange={handleChange}
               />
             </div>
-            <div className="input-field">
+       <div className="form-group mt-3 text-start input-field">
               
               <input hidden
                 autoComplete="off"
@@ -233,8 +234,8 @@ export default function RegisteredPost() {
                 onChange={handleChange}
               />
             </div>
-            <div className="input-field">
-              <label>Sender's PinCode</label>
+       <div className="form-group mt-3 text-start input-field">
+              <label >Sender's PinCode</label>
               <Pincode
                 invalidError="Please check pincode"
                 lengthError="check length"
@@ -243,14 +244,14 @@ export default function RegisteredPost() {
               />
               </div>
               <div className="form-group mt-3 d-flex flex-column  align-items-center justify-content-center">
-            <button className="link" onClick={handleDisplay}>
+            <button className="btn btn-primary w-75 mb-2"onClick={handleDisplay}>
                 Next
                 </button></div>
             </div>)}
             {isOpen && (
               <div id="Reciver-field">
                 
-                <div className="input-field">
+              <div className="form-group mt-3 text-start input-field">
                   <label>Reciever's Name</label>
                   <input
                     autoComplete="off"
@@ -259,11 +260,11 @@ export default function RegisteredPost() {
                     id="formGroupExampleInput"
                     required
                     name="rfname"
-                    placeholder="first name"
+                    placeholder="Name"
                     onChange={handleChange}
                   />
-                  <br />
-                  <input
+                 
+                  <input 
                     autoComplete="off"
                     type="text"
                     className="form-control"
@@ -274,7 +275,7 @@ export default function RegisteredPost() {
                     onChange={handleChange}
                   />
                 </div>
-                <div className="input-field">
+               <div className="form-group mt-3 text-start input-field">
                   <label>Reciever Address</label>
                   <input
                     autoComplete="off"
@@ -286,7 +287,7 @@ export default function RegisteredPost() {
                     onChange={handleChange}
                   />
                 </div>
-                <div className="input-field">
+                 <div className="form-group mt-3 text-start input-field">
                   <label>Reciever's PinCode</label>
                   <Pincode
                     invalidError="Please check pincode"
@@ -296,7 +297,7 @@ export default function RegisteredPost() {
                   />
                 </div>
 
-                <div className="input-field">
+                <div className="form-group mt-3 text-start input-field">
                   <label>Reciever's Mobile</label>
                   <input
                     autoComplete="off"
@@ -310,14 +311,14 @@ export default function RegisteredPost() {
                 </div>
                 
                   <div className="form-group mt-3 d-flex flex-column  align-items-center justify-content-center">
-                  <button className="link" type="submit">
+                  <button className="btn btn-primary w-75 mb-2" type="submit">
                     Register
                   </button></div>
                 
               </div>)}
           </form>
         </div>
-      </div>
-    </>
+      </div></div>
+    </div>
   );
 }

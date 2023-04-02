@@ -33,10 +33,10 @@ function DownloadData() {
   return (
     <div className="login-box">
       <div>
-        <h1>Send Data to registered email Id.</h1>
+        <h1>Send Data to registered email.</h1>
       </div>
       <div>
-        <button className="link" onClick={fetchData}>
+        <button className="btn btn-primary w-75 mb-2" onClick={fetchData}>
           Send Email
         </button>
         <br></br>

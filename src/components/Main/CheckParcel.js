@@ -37,7 +37,7 @@ export default function CheckParcel () {
       console.log("Closed...");
     };
   const w1 = parseFloat("12.12sa")//(weight1.substring(0,6))
-  const w = parseFloat("1.12sa")//(weight.substring(0, 6))
+  const w = parseFloat("12.12sa")//(weight.substring(0, 6))
   
   const checkWeight = () => {
     console.log("clicked")
@@ -73,7 +73,7 @@ export default function CheckParcel () {
 
         
         {w==w1  ? (
-        <Link  to="/payment" className="link1"><button className="link2">Make PayMent</button></Link>
+        <Link  to="/payment" className="link1"><button className="btn btn-primary w-75 mb-2">Make PayMent</button></Link>
       ) : (
               <><h1>Weight missmatch. Please Place the same parcel</h1>
                 <button onClick={checkWeight} className="error">Click to Check Again</button></>

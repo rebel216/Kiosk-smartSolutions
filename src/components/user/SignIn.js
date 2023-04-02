@@ -54,7 +54,7 @@ const SignIn = () => {
       <div className="login"><h1>Log in</h1></div>
     <div className="Auth-container ">
       
-      <center className="">
+      <center className="login-box">
         <div
           className="input-box"
           style={{ display: !show ? "block" : "none" }}
@@ -70,7 +70,7 @@ const SignIn = () => {
           <br />
           <br />
           <div id="recaptcha-container"></div>
-          <button className="link" onClick={signin}>
+          <button className="btn btn-primary w-75 mb-2" onClick={signin}>
             SendOTP
           </button>
         </div>
