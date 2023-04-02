@@ -6,7 +6,7 @@ body {
   margin:0;
   padding:0;
   font-family: sans-serif;
-  background: linear-gradient(#7c9dd3, #c3cdd7);
+  background: linear-gradient(#c6cad1, #c3cdd7);
 }
 
 .heading{
@@ -52,10 +52,15 @@ top: 20%;
   width: auto;
   padding: 10px;
   transform: translate(-50%, -50%);
-  background: rgba(74, 235, 241, 0.376);
+  background: rgba(223, 236, 236, 0.376);
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(11, 11, 11, 0.801);
   border-radius: 10px;
+}
+
+.login{
+margin-top: 270px;
+
 }
 
 .login-box {
@@ -65,7 +70,7 @@ top: 20%;
   width: auto;
   padding: 10px;
   transform: translate(-50%, -50%);
-  background: rgba(74, 235, 241, 0.376);
+  background: rgba(197, 238, 241, 0.376);
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(11, 11, 11, 0.801);
   border-radius: 10px;
@@ -250,7 +255,7 @@ text-decoration: none;
   left: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #5d989c);
+  background: linear-gradient(90deg, transparent, #c5dadc);
   animation: btn-anim1 1s linear infinite;
 }
 
@@ -268,7 +273,7 @@ text-decoration: none;
   right: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(180deg, transparent, #03e9f4);
+  background: linear-gradient(180deg, transparent, #c6e1e2);
   animation: btn-anim2 1s linear infinite;
   animation-delay: .25s
 }
@@ -287,7 +292,7 @@ text-decoration: none;
   right: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(270deg, transparent, #03e9f4);
+  background: linear-gradient(270deg, transparent, #c8e0e1);
   animation: btn-anim3 1s linear infinite;
   animation-delay: .5s
 }
@@ -306,7 +311,7 @@ text-decoration: none;
   left: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(360deg, transparent, #03e9f4);
+  background: linear-gradient(360deg, transparent, #d9e9ea);
   animation: btn-anim4 1s linear infinite;
   animation-delay: .75s
 }

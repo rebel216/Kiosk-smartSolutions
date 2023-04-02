@@ -7,7 +7,7 @@
 }
 body {
   font-family: "Poppins", sans-serif;
-  background-color: lightcyan;
+  background-color: rgb(211, 233, 233);
 }
 
 .form-container {
@@ -37,7 +37,7 @@ body {
 .wrapper {
   background: white;
   width: 900px;
-  background-color: lightcyan;
+  background-color: rgb(116, 132, 132);
   top: 50%;
   left: 50%;
   display: block;

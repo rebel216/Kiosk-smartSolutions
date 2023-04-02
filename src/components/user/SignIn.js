@@ -51,7 +51,7 @@ const SignIn = () => {
 
     return (
         <>
-      <div className="login"><h1>Log in</h1></div>
+      <div className="login"><h1>Log in to Book Parcel</h1></div>
     <div className="Auth-container ">
       
       <center className="login-box">
@@ -65,7 +65,7 @@ const SignIn = () => {
             onChange={(e) => {
               setnumber(e.target.value);
             }}
-            placeholder="phone number"
+            placeholder="Enter Mobile Number"
           />
           <br />
           <br />
