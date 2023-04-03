@@ -2,21 +2,26 @@ import React, { useRef } from "react";
 import Barcode from 'react-barcode';
 import { Navigate, useNavigate } from "react-router-dom";
 import logo from '../assets/images/logo.png'
+import { useState } from "react";
+
 
 export default function PrintComponent() {
+const [isPrinting, setIsPrinting] = useState(false);
   const navigate = useNavigate();
   const time = new Date().toLocaleString()
-  const handleClick = () => {
-        
+    const handleClick = () => {
+          setIsPrinting(true);
+ window.print()
+    navigate("/ScanBarcode")
+
+    }
   
 
-   window.print()
-    navigate("/ScanBarcode")
-  }
   var user = JSON.parse(sessionStorage.user);
   var barcode2 = JSON.parse(sessionStorage.barcode2);
 
   console.log(user.user)
+ 
   return (
     <>
     
@@ -46,12 +51,12 @@ export default function PrintComponent() {
           <h6 className="centered"> Mobile:<span>  </span>{user.user.phone1}</h6>
           <h6 className="centered">  PinCode:<span>  </span>{user.user.pincode1}</h6>
       
-        </div> <div className="">
+        </div> {!isPrinting &&  (<div className="print_btn">
           <div className="form-group mt-3 d-flex flex-column  align-items-center justify-content-center">
                
-        <button className='btn btn-primary w-75 mb-2' onClick={handleClick}>PRINT</button></div>
-        
-        </div>
+        <button className='print btn btn-primary w-75 mb-2' onClick={handleClick}>Print</button>
+      </div>  
+        </div>)}
        </div>
     </>
   )

@@ -25,7 +25,7 @@ function loadScript(src) {
 
     const options = {
         key: "rzp_test_c5Tw7vHbkg3thN", // Enter the Key ID generated from the Dashboard
-        amount: "100",
+        amount: "10000", // caculate amnt later 
         currency: "INR",
     }
     
