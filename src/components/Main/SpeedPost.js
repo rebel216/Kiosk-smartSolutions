@@ -152,12 +152,13 @@ export default function SpeedPost() {
   };
 
   return (
-    <div className="Auth-container">
-      <div className="Auth-content">
-      <div className="header" id="myHeader">
-        <div className="header-items">
+    <div className="Auth-container login-box">
+      <div className="header-items">
           <h1 className="heading">SpeedPost</h1>
         </div>
+      <div className="Auth-content">
+      <div className="header" id="myHeader">
+        
       </div>
 <div className="weight-field">
               <label>Weight(Automatic)</label>
@@ -181,7 +182,7 @@ export default function SpeedPost() {
                     onChange={handleChange}
         />
         </div>
-      <div className="Auth-for">
+      <div className="Auth-for login-box">
         <div className="input-box">
           <form onSubmit={(e) => handleSubmit(e)} >
             {isOpen2&&(<div id="Sender-field">

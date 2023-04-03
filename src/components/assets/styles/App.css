@@ -10,10 +10,11 @@ body {
 }
 
 .heading{
-  
-	font-size: 60px;
-	margin-top: 30px;
-  text-align: center;
+  margin-top: -490px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-left: 231px;
 }
 
 .error{

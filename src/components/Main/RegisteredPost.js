@@ -152,7 +152,7 @@ export default function RegisteredPost() {
   };
 
   return (
-    <div className="Auth-container">
+    <div className="Auth-container login-box">
       <div className="Auth-content">
       <div className="header" id="myHeader">
         <div className="header-items">
@@ -181,7 +181,7 @@ export default function RegisteredPost() {
                     onChange={handleChange}
         />
         </div>
-      <div className="Auth-for">
+      <div className="Auth-for login-box">
         <div className="input-box">
           <form onSubmit={(e) => handleSubmit(e)} >
             {isOpen2&&(<div id="Sender-field">
