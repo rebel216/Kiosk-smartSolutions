@@ -2,11 +2,13 @@
 //import { QRCode } from 'react-qrcode-logo';
 import React, { useState } from 'react'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 
 
 function PayMent() {
 
+    const navigate = useNavigate();
 function loadScript(src) {
 	return new Promise((resolve) => {
 		const script = document.createElement('script')
@@ -21,7 +23,13 @@ function loadScript(src) {
 	})
 }
 
-	async function displayRazorpay() {
+    const options = {
+        key: "rzp_test_c5Tw7vHbkg3thN", // Enter the Key ID generated from the Dashboard
+        amount: "100",
+        currency: "INR",
+    }
+    
+    async function displayRazorpay() {
         const res = await loadScript(
             "https://checkout.razorpay.com/v1/checkout.js"
         );
@@ -30,25 +38,25 @@ function loadScript(src) {
             alert("Razorpay SDK failed to load. Are you online?");
             return;
         }
-
-        // creating a new order
-        const result = await axios.post("http://localhost:9000/payment/orders");
+      const result = await axios.post("http://localhost:9000/payment/orders");
+    //     console.log(result)
+    //     // creating a new order
+    //  console.log("clicked")
 
         if (!result) {
             alert("Server error. Are you online?");
             return;
         }
 
-        // Getting the order details back
-        const { amount, id: order_id, currency } = result.data;
-
-        const options = {
-            key: "rzp_test_r6FiJfddJh76SI", // Enter the Key ID generated from the Dashboard
+       // Getting the order details back
+       const { amount, id: order_id, currency } = result.data;
+       const options = {
+            key: "rzp_test_c5Tw7vHbkg3thN", // Enter the Key ID generated from the Dashboard
             amount: amount.toString(),
             currency: currency,
-            name: "Soumya Corp.",
+            name: "Xoqovo Corp",
             description: "Test Transaction",
-           
+            
             order_id: order_id,
             handler: async function (response) {
                 const data = {
@@ -58,23 +66,25 @@ function loadScript(src) {
                     razorpaySignature: response.razorpay_signature,
                 };
 
-                const result = await axios.post("http://localhost:5000/payment/success", data);
-
-                alert(result.data.msg);
+               // const result = await axios.post("http://localhost:9000/payment/success",data);
+       navigate("/success")
+                alert("PAyment succesfull");
             },
             prefill: {
-                name: "Soumya Dey",
-                email: "SoumyaDey@example.com",
-                contact: "9999999999",
+                name: "Xoqovo",
+                email: "Xoqovo@example.com",
+                contact: "1231231231",
             },
             notes: {
-                address: "Soumya Dey Corporate Office",
-            },
+                address: "Xoqovo Corporate Office",
+           },
+          
             theme: {
                 color: "#61dafb",
             },
         };
-
+      
+        
         const paymentObject = new window.Razorpay(options);
         paymentObject.open();
 }

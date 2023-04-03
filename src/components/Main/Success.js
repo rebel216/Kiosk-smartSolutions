@@ -41,13 +41,14 @@ export default function Success() {
     <div className='login-box'>
     <div><h1>Post is Accepted and You can track it online.</h1></div>
     
-        
+        <div className="form-group mt-3 d-flex flex-column  align-items-center justify-content-center">
+              
         <Link to="/devise" className="link1" onClick={() => {
           client.send('!');
           dispatch(AddVehicleSlice(formData.user));
           //send data to ruby backend here
         
-        }}><button className='align-items-center justify-content-center btn btn-primary w-75 mb-2'>Go Home</button></Link>
+        }}><button className='align-items-center justify-content-center btn btn-primary w-75 mb-2'>Go Home</button></Link></div>
       {/* done show only when payment successfull */}
  
 
