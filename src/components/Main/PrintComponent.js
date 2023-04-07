@@ -6,32 +6,32 @@ import { useState } from "react";
 
 
 export default function PrintComponent() {
-const [isPrinting, setIsPrinting] = useState(false);
+const  [isPrinting, setIsPrinting] = useState(false);
   const navigate = useNavigate();
   const time = new Date().toLocaleString()
     const handleClick = () => {
-          setIsPrinting(true);
+         setIsPrinting(true);
  window.print()
     navigate("/ScanBarcode")
 
     }
-  
+
 
   var user = JSON.parse(sessionStorage.user);
   var barcode2 = JSON.parse(sessionStorage.barcode2);
 
   console.log(user.user)
- 
+
   return (
     <>
-    
-      <div>
-        
-      <div className="login-box">
+
+      <div className="">
+
+      <div className="print-form">
 
   <Barcode value={barcode2} />
-        
-          
+
+
 
           <h6 className="centered">Date:<span>  </span> {time} </h6>
           <h6 className="centered">Reciever:</h6>
@@ -50,12 +50,12 @@ const [isPrinting, setIsPrinting] = useState(false);
           <h6 className="centered">  City:<span>  </span>{user.user.city1}</h6>
           <h6 className="centered"> Mobile:<span>  </span>{user.user.phone1}</h6>
           <h6 className="centered">  PinCode:<span>  </span>{user.user.pincode1}</h6>
-      
+
         </div> {!isPrinting &&  (<div className="print_btn">
           <div className="form-group mt-3 d-flex flex-column  align-items-center justify-content-center">
-               
-        <button className='print btn btn-primary w-75 mb-2' onClick={handleClick}>Print</button>
-      </div>  
+
+        <button className='print btn btn-primary w-95 mb-2' onClick={handleClick}>Print</button>
+      </div>
         </div>)}
        </div>
     </>

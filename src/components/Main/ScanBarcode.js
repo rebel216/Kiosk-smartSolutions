@@ -5,8 +5,10 @@ import { Link } from "react-router-dom";
 //console.log(JSON.parse(sessionStorage.barcode2))
 var barcode2 =null
 var barcode = null
+
 class ScanBarcode extends Component {
-barcode2 = JSON.parse(sessionStorage.barcode2);
+
+
   constructor(props){
     super(props)
     this.state = {
@@ -20,9 +22,11 @@ barcode2 = JSON.parse(sessionStorage.barcode2);
       result: data,
     })
     //sessionStorage.barcode1 ="RP123423234IN" //JSON.stringify(data);//change barcode here ... harcoding for test
+    barcode2 = JSON.parse(sessionStorage.barcode2);
+    console.log(barcode2)
 
-    //console.log(sessionStorage.barcode)
     barcode = data;
+    console.log(barcode)
   }
   handleError(err) {
     barcode = null

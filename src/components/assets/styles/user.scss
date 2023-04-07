@@ -53,6 +53,20 @@ code {
     background: rgba(74, 235, 241, 0.376);
 }
 
+.print-form {
+  align-items: center;
+  align-content: center;
+
+  width: auto;
+  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-radius: 8px;
+
+}
+
+
+
 .add-product-form {
   width: 50%;
 }

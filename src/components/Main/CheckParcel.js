@@ -36,8 +36,8 @@ export default function CheckParcel () {
     client.onclose = () => {
       console.log("Closed...");
     };
-  const w1 = (weight1.substring(0,6))
-  const w = (weight.substring(0, 6))
+  const w1 =(weight1.substring(0,6))// parseFloat("12.12sa")//
+  const w = (weight.substring(0, 6))//parseFloat("12.12sa")//
 
   const checkWeight = () => {
     console.log("clicked")

@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import BASE_URL_PAY from '../../parmentapi';
 
 
 
@@ -25,10 +26,10 @@ function loadScript(src) {
 
     const options = {
         key: "rzp_test_c5Tw7vHbkg3thN", // Enter the Key ID generated from the Dashboard
-        amount: "10000", // caculate amnt later 
+        amount: "10000", // caculate amnt later
         currency: "INR",
     }
-    
+
     async function displayRazorpay() {
         const res = await loadScript(
             "https://checkout.razorpay.com/v1/checkout.js"
@@ -38,8 +39,8 @@ function loadScript(src) {
             alert("Razorpay SDK failed to load. Are you online?");
             return;
         }
-      const result = await axios.post("http://localhost:9000/payment/orders");
-    //     console.log(result)
+      const result = await axios.post(`${BASE_URL_PAY}`);
+        console.log(result)
     //     // creating a new order
     //  console.log("clicked")
 
@@ -56,7 +57,7 @@ function loadScript(src) {
             currency: currency,
             name: "Xoqovo Corp",
             description: "Test Transaction",
-            
+
             order_id: order_id,
             handler: async function (response) {
                 const data = {
@@ -68,7 +69,7 @@ function loadScript(src) {
 
                // const result = await axios.post("http://localhost:9000/payment/success",data);
        navigate("/success")
-                alert("PAyment succesfull");
+                alert("Payment succesfull");
             },
             prefill: {
                 name: "Xoqovo",
@@ -78,29 +79,30 @@ function loadScript(src) {
             notes: {
                 address: "Xoqovo Corporate Office",
            },
-          
+
             theme: {
                 color: "#61dafb",
             },
         };
-      
-        
+
+
         const paymentObject = new window.Razorpay(options);
         paymentObject.open();
 }
-	
 
-	return (
-		  <div className="Auth-form login-box">
+
+    return (
+        <>
+		  <div className="Auth-container">
             <header className="App-header">
-                
+
                 <h2>Make payment </h2>
                 <div className="form-group mt-3 d-flex flex-column  align-items-center justify-content-center">
                 <button className="btn btn-primary w-75 mb-2" onClick={displayRazorpay}>
                     Pay ₹100
                 </button></div>
             </header>
-        </div>
+        </div></>
 	)
 }
 

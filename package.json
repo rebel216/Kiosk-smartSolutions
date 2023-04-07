@@ -29,6 +29,7 @@
     "react-redux": "^8.0.2",
     "react-router-dom": "^6.4.0",
     "react-scripts": "^5.0.1",
+    "react-simple-keyboard": "^3.5.53",
     "react-spring": "^9.5.4",
     "react-to-print": "^2.14.11",
     "redux": "^4.2.0",

@@ -43,8 +43,8 @@ export default function RegisteredPost() {
   //return () => client.OPEN && client.close();
 
   const phone = JSON.parse(sessionStorage.phone);
- 
- 
+
+
   sessionStorage.barcode2 = JSON.stringify(barcode2);
  console.log(sessionStorage.barcode2)
   const navigate = useNavigate();
@@ -77,7 +77,7 @@ export default function RegisteredPost() {
     barcode: "",
     postoffice: "",
     user_id: "",
-    
+
   });
   const handleChange = (e) => {
     setUser({
@@ -101,13 +101,13 @@ export default function RegisteredPost() {
     return false;
   };
 
-  const handleDisplay = (e) => { 
+  const handleDisplay = (e) => {
     if (validateFields(e.target)) {
     setisOpen(true);
     setisOpen2(false);
     }
 
-    
+
   }
   const handleSubmit = (e) => {
     client.close();
@@ -152,7 +152,7 @@ export default function RegisteredPost() {
   };
 
   return (
-    <div className="Auth-container login-box">
+    <div className="Auth-container">
       <div className="Auth-content">
       <div className="header" id="myHeader">
         <div className="header-items">
@@ -185,8 +185,8 @@ export default function RegisteredPost() {
         <div className="input-box">
           <form onSubmit={(e) => handleSubmit(e)} >
             {isOpen2&&(<div id="Sender-field">
-            
-              
+
+
             <div className="form-group mt-3 text-start input-field">
               <label>Sender's Name</label>
               <input
@@ -199,7 +199,7 @@ export default function RegisteredPost() {
                 placeholder="first name"
                 onChange={handleChange}
               />
-           
+
               <input
                 autoComplete="off"
                 type="text"
@@ -211,7 +211,7 @@ export default function RegisteredPost() {
                 onChange={handleChange}
               />
               </div>
-              
+
            <div className="form-group mt-3 text-start input-field">
               <label>Sender Address</label>
               <input
@@ -225,7 +225,7 @@ export default function RegisteredPost() {
               />
             </div>
        <div className="form-group mt-3 text-start input-field">
-              
+
               <input hidden
                 autoComplete="off"
                 className="form-control"
@@ -250,7 +250,7 @@ export default function RegisteredPost() {
             </div>)}
             {isOpen && (
               <div id="Reciver-field">
-                
+
               <div className="form-group mt-3 text-start input-field">
                   <label>Reciever's Name</label>
                   <input
@@ -263,8 +263,8 @@ export default function RegisteredPost() {
                     placeholder="Name"
                     onChange={handleChange}
                   />
-                 
-                  <input 
+
+                  <input
                     autoComplete="off"
                     type="text"
                     className="form-control"
@@ -309,12 +309,12 @@ export default function RegisteredPost() {
                     onChange={handleChange}
                   />
                 </div>
-                
+
                   <div className="form-group mt-3 d-flex flex-column  align-items-center justify-content-center">
                   <button className="btn btn-primary w-75 mb-2" type="submit">
                     Register
                   </button></div>
-                
+
               </div>)}
           </form>
         </div>
