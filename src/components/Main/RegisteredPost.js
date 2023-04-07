@@ -181,7 +181,7 @@ export default function RegisteredPost() {
                     onChange={handleChange}
         />
         </div>
-      <div className="Auth-for login-box">
+      <div className="Auth-form login-box">
         <div className="input-box">
           <form onSubmit={(e) => handleSubmit(e)} >
             {isOpen2&&(<div id="Sender-field">

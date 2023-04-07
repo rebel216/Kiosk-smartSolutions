@@ -8,7 +8,7 @@ const client = new W3CWebSocket("ws://localhost:9000");
 export default function CheckParcel () {
 
 
-  //const weight1 = JSON.parse(sessionStorage.weight1);
+  const weight1 = JSON.parse(sessionStorage.weight1);
 
   const [weight, setWeight] = useState("");
 
@@ -36,9 +36,9 @@ export default function CheckParcel () {
     client.onclose = () => {
       console.log("Closed...");
     };
-  const w1 = parseFloat("12.12sa")//(weight1.substring(0,6))
-  const w = parseFloat("12.12sa")//(weight.substring(0, 6))
-  
+  const w1 = (weight1.substring(0,6))
+  const w = (weight.substring(0, 6))
+
   const checkWeight = () => {
     console.log("clicked")
     client.onmessage = (e) => {
@@ -65,23 +65,25 @@ export default function CheckParcel () {
  }
 
   return (
-    <div className='heading'>
-        <h1>Place the parcel inside the Machine Again</h1>
-        <div className='login-box'>
-      
+    <div className="Auth-container">
+      <h1 className='heading' >Place the parcel inside the Machine Again</h1>
+     <div className='Auth-form login-box'>
 
 
-        
+
+
+
+
         {w==w1  ? (
         <Link  to="/payment" className="link1"><button className="btn btn-primary w-75 mb-2">Make PayMent</button></Link>
       ) : (
               <><h1>Weight missmatch. Please Place the same parcel</h1>
                 <button onClick={checkWeight} className="error">Click to Check Again</button></>
       )}
-       
-</div>
 
-      </div>
+
+
+      </div></div>
     )
 
 }

@@ -38,8 +38,10 @@ export default function Success() {
 
 
   return (
-    <div className='login-box'>
-    <div><h1>Post is Accepted and You can track it online.</h1></div>
+    <div className="Auth-container">
+      <h1 className='heading' >Post is Accepted and You can track it online.</h1>
+    <div className='Auth-form login-box'>
+    
     
         <div className="form-group mt-3 d-flex flex-column  align-items-center justify-content-center">
               
@@ -52,7 +54,8 @@ export default function Success() {
       {/* done show only when payment successfull */}
  
 
- </div>
+      </div>
+      </div>
 
   )
 }

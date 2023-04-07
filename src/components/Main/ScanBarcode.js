@@ -32,20 +32,20 @@ barcode2 = JSON.parse(sessionStorage.barcode2);
 
     return (
       <div className="Auth-container">
-        
-          
-      <div className="Auth-content">
-         <h3 className='heading'>Take out the Parcel out of machine , stick the lable on Parcel and scan the lable in Barcode Scanner.</h3>
+
+
+      <div className="Auth-form login-box">
+         <h3 className=''>Take out the Parcel out of machine , stick the lable on Parcel and scan the lable in Barcode Scanner.</h3>
          <BarcodeReader
           onError={this.handleError}
           onScan={this.handleScan}
         />
-     
 
 
 
-        {true ? ( // change here
-          true ?(// change here
+
+        {barcode ? ( // change here
+          barcode == barcode2 ?(// change here
             <><p><h1 className='success'>Sucess</h1></p><p><Link to="/checkparcelweight" className="link1"><button className="btn btn-primary w-75 mb-2" >Next Page</button></Link></p></>
           ) : (
               <><h2 className="link1">Use Barcode Printed on Lable</h2><p><button className="error ">Scan Again</button></p></>)

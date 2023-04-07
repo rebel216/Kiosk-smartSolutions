@@ -91,7 +91,7 @@ function loadScript(src) {
 	
 
 	return (
-		  <div className="login-box">
+		  <div className="Auth-form login-box">
             <header className="App-header">
                 
                 <h2>Make payment </h2>
